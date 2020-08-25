@@ -1,0 +1,13 @@
+<%- include("partials/header") -%>
+
+<h1>INICIO</h1>
+<p><%= contenidoInicial %> </p>
+<%Diario.forEach(function(publicacion){%>
+
+<h1><%=publicacion.title%></h1>
+<p><%=publicacion.content.substr(0,100)+" ..."%> <a href="/posts/<%=publicacion._id%> ">Leer más</a></h1>
+    <%})%>
+
+
+
+    <%- include("partials/footer") -%>
